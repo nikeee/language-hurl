@@ -1,0 +1,15 @@
+{
+  "name": "language-hurl",
+  "version": "1.0.0",
+  "author": "Niklas Mollenhauer",
+  "description": "Syntax support for hurl files",
+  "repository": "https://github.com/nikeee/language-hurl",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "hurl",
+    "github",
+    "linguist",
+    "tmlanguage"
+  ]
+}
