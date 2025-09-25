@@ -26,6 +26,9 @@
     },
     {
       "include": "#regex"
+    },
+    {
+      "include": "#xml"
     }
   ],
   "repository": {
@@ -142,6 +145,19 @@
             {
               "name": "constant.character.escape.regex.hurl",
               "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "xml": {
+      "patterns": [
+        {
+          "begin": "<\\?xml",
+          "end": "(?=HTTP)|$",
+          "patterns": [
+            {
+              "include": "text.xml"
             }
           ]
         }
