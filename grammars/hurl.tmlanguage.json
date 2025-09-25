@@ -101,7 +101,19 @@
         {
           "name": "string.quoted.multiline.hurl",
           "begin": "```",
-          "end": "```"
+          "end": "```",
+          "patterns": [
+            {
+              "name": "markup.fenced_code.graphql.hurl",
+              "begin": "```graphql",
+              "end": "```",
+              "patterns": [
+                {
+                  "include": "source.graphql"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
