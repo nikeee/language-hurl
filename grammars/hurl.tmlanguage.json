@@ -40,8 +40,7 @@
       "patterns": [
         {
           "name": "string.quoted.double.hurl",
-          "begin": "\"",
-          "end": "\"",
+          "match": "\"(\\\\.|[^\"\\\\])*\"",
           "patterns": [
             {
               "include": "#escapes"
@@ -77,8 +76,7 @@
       "patterns": [
         {
           "name": "string.quoted.backtick.hurl",
-          "begin": "`",
-          "end": "`",
+          "match": "`(\\\\.|[^`\\\\])*`",
           "patterns": [
             {
               "include": "#escapes"
