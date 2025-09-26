@@ -2,19 +2,28 @@
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "name": "Hurl",
     "scopeName": "source.hurl",
-
     "patterns": [
         {
             "include": "#comments"
+        },
+        {
+            "include": "#sections"
         }
     ],
-
     "repository": {
         "comments": {
             "patterns": [
                 {
                     "name": "comment.line.number-sign.hurl",
                     "match": "#.*$"
+                }
+            ]
+        },
+        "sections": {
+            "patterns": [
+                {
+                    "name": "entity.name.section.hurl",
+                    "match": "^\\s*\\[(QueryStringParams|Query|FormParams|Form|MultipartFormData|Multipart|Cookies|Captures|Asserts|BasicAuth|Options)\\]"
                 }
             ]
         }
