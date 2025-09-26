@@ -8,6 +8,9 @@
         },
         {
             "include": "#sections"
+        },
+        {
+            "include": "#strings"
         }
     ],
     "repository": {
@@ -27,5 +30,19 @@
                 }
             ]
         }
+    },
+    "strings": {
+        "patterns": [
+            {
+                "name": "string.quoted.double.hurl",
+                "begin": "\"",
+                "end": "\"",
+                "patterns": [
+                    {
+                        "include": "#escapes"
+                    }
+                ]
+            }
+        ]
     }
 }
