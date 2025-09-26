@@ -29,28 +29,28 @@
                     "match": "^\\s*\\[(QueryStringParams|Query|FormParams|Form|MultipartFormData|Multipart|Cookies|Captures|Asserts|BasicAuth|Options)\\]"
                 }
             ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.hurl",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "include": "#escapes"
+                        }
+                    ]
+                }
+            ]
+        },
+        "escapes": {
+            "patterns": [
+                {
+                    "name": "constant.character.escape.hurl",
+                    "match": "\\\\[\\\\\"`#btnru]"
+                }
+            ]
         }
-    },
-    "strings": {
-        "patterns": [
-            {
-                "name": "string.quoted.double.hurl",
-                "begin": "\"",
-                "end": "\"",
-                "patterns": [
-                    {
-                        "include": "#escapes"
-                    }
-                ]
-            }
-        ]
-    },
-    "escapes": {
-      "patterns": [
-        {
-          "name": "constant.character.escape.hurl",
-          "match": "\\\\[\\\\\"`#btnru]"
-        }
-      ]
     }
 }
