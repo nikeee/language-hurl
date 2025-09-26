@@ -131,8 +131,16 @@
         },
         {
           "name": "string.quoted.multiline.hurl",
-          "begin": "```$",
-          "end": "```$"
+          "begin": "```([^,]*)(,\\w+)*$",
+          "end": "```$",
+          "beginCaptures": {
+            "1": {
+              "name": "support.type"
+            },
+            "2": {
+              "name": "support.type"
+            }
+          }
         },
         {
           "name": "string.quoted.backtick.hurl",
