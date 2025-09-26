@@ -1,0 +1,179 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Hurl",
+  "scopeName": "source.hurl",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#sections"
+    },
+    {
+      "include": "#options"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#placeholders"
+    },
+    {
+      "include": "#regex"
+    },
+    {
+      "include": "#xml"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.hurl",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "sections": {
+      "patterns": [
+        {
+          "name": "entity.name.section.hurl",
+          "match": "^\\s*\\[(QueryStringParams|Query|FormParams|Form|MultipartFormData|Multipart|Cookies|Captures|Asserts|BasicAuth|Options)\\]"
+        }
+      ]
+    },
+    "options": {
+      "patterns": [
+        {
+          "name": "support.function.option.hurl",
+          "match": "\\b(aws-sigv4|cacert|cert|key|compressed|connect-to|connect-timeout|delay|location|location-trusted|header|http1.0|http1.1|http2|http3|insecure|ipv4|ipv6|limit-rate|max-redirs|max-time|netrc|netrc-file|netrc-optional|output|path-as-is|pinnedpubkey|proxy|resolve|repeat|retry|retry-interval|skip|unix-socket|user|variable|verbose|very-verbose)\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.operator.hurl",
+          "match": "\\b(GET|POST|PUT|DELETE|HEAD|PATCH|OPTIONS)\\b"
+        },
+        {
+          "name": "constant.language.version.hurl",
+          "match": "\\bHTTP/(1\\.0|1\\.1|2)\\b"
+        },
+        {
+          "name": "constant.numeric.status.hurl",
+          "match": "\\b[0-9]{3}\\b"
+        },
+        {
+          "name": "keyword.operator.predicate.hurl",
+          "match": "(==|!=|>=|<=|>|<|startsWith|endsWith|contains|matches|exists|isEmpty|includes|isInteger|isFloat|isBoolean|isString|isCollection|isDate|isIsoDate|isIpv4|isIpv6|isUuid)"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.hurl",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "include": "#escapes"
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.backtick.hurl",
+          "begin": "`",
+          "end": "`",
+          "patterns": [
+            {
+              "include": "#escapes"
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.multiline.hurl",
+          "begin": "```",
+          "end": "```",
+          "patterns": [
+            {
+              "name": "markup.fenced_code.graphql.hurl",
+              "begin": "```graphql",
+              "end": "```",
+              "patterns": [
+                {
+                  "include": "source.graphql"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "escapes": {
+      "patterns": [
+        {
+          "name": "constant.character.escape.hurl",
+          "match": "\\\\[\\\\\"`#btnru]"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.hurl",
+          "match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+        }
+      ]
+    },
+    "placeholders": {
+      "patterns": [
+        {
+          "name": "variable.other.placeholder.hurl",
+          "begin": "\\{\\{",
+          "end": "\\}\\}",
+          "patterns": [
+            {
+              "include": "#keywords"
+            }
+          ]
+        }
+      ]
+    },
+    "regex": {
+      "patterns": [
+        {
+          "name": "string.regexp.hurl",
+          "begin": "/",
+          "end": "/",
+          "patterns": [
+            {
+              "name": "constant.character.escape.regex.hurl",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "xml": {
+      "patterns": [
+        {
+          "begin": "<\\?xml",
+          "end": "(?=HTTP)|$",
+          "patterns": [
+            {
+              "include": "text.xml"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
