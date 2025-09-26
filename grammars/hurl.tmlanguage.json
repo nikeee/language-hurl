@@ -41,6 +41,16 @@
               "include": "#escapes"
             }
           ]
+        },
+        {
+          "name": "string.quoted.backtick.hurl",
+          "begin": "`",
+          "end": "`",
+          "patterns": [
+            {
+              "include": "#escapes"
+            }
+          ]
         }
       ]
     },
