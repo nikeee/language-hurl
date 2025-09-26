@@ -75,34 +75,59 @@
     "body": {
       "patterns": [
         {
-          "name": "string.quoted.multiline.hurl",
+          "name": "meta.embedded.block.graphql.hurl",
           "contentName": "source.graphql",
-          "begin": "```graphql$",
-          "end": "```$"
+          "begin": "```graphql(,\\w+)*$",
+          "end": "```$",
+          "beginCaptures": {
+            "1": {
+              "name": "support.type"
+            }
+          }
         },
         {
-          "name": "string.quoted.multiline.hurl",
+          "name": "meta.embedded.block.xml.hurl",
           "contentName": "text.xml",
-          "begin": "```xml$",
-          "end": "```$"
+          "begin": "```xml(,\\w+)*$",
+          "end": "```$",
+          "beginCaptures": {
+            "1": {
+              "name": "support.type"
+            }
+          }
         },
         {
-          "name": "string.quoted.multiline.hurl",
+          "name": "meta.embedded.block.json.hurl",
           "contentName": "text.json",
-          "begin": "```json$",
-          "end": "```$"
+          "begin": "```json(,\\w+)*$",
+          "end": "```$",
+          "beginCaptures": {
+            "1": {
+              "name": "support.type"
+            }
+          }
         },
         {
           "name": "string.quoted.multiline.hurl",
           "contentName": "text.plain",
-          "begin": "```hex$",
-          "end": "```$"
+          "begin": "```hex(,\\w+)*$",
+          "end": "```$",
+          "beginCaptures": {
+            "1": {
+              "name": "support.type"
+            }
+          }
         },
         {
           "name": "string.quoted.multiline.hurl",
           "contentName": "text.plain",
-          "begin": "```base64$",
-          "end": "```$"
+          "begin": "```base64(,\\w+)*$",
+          "end": "```$",
+          "beginCaptures": {
+            "1": {
+              "name": "support.type"
+            }
+          }
         },
         {
           "name": "string.quoted.multiline.hurl",
