@@ -12,6 +12,23 @@
     "linguist",
     "tmlanguage"
   ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "hurl",
+        "aliases": ["Hurl", "hurl"],
+        "extensions": [".hurl"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "hurl",
+        "scopeName": "source.hurl",
+        "path": "./grammars/hurl.tmlanguage.json"
+      }
+    ]
+  },
   "devDependencies": {
     "vscode-tmgrammar-test": "^0.1.3"
   }
