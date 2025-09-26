@@ -49,6 +49,15 @@
         }
       ]
     },
+    "placeholders": {
+      "patterns": [
+        {
+          "name": "variable.other.placeholder.hurl",
+          "begin": "\\{\\{",
+          "end": "\\}\\}"
+        }
+      ]
+    },
     "escapes": {
       "patterns": [
         {
@@ -148,6 +157,27 @@
           "patterns": [
             {
               "include": "#escapes"
+            }
+          ]
+        },
+        {
+          "name": "support.function",
+          "begin": "\\b(base64|hex),",
+          "end": ";",
+          "contentName": "text.plain",
+          "beginCaptures": {
+            "1": {
+              "name": "support.function.name"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "support.function"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#placeholders"
             }
           ]
         }
