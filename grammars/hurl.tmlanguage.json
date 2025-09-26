@@ -14,6 +14,9 @@
     },
     {
       "include": "#strings"
+    },
+    {
+      "include": "#body"
     }
   ],
   "repository": {
@@ -44,16 +47,6 @@
               "include": "#escapes"
             }
           ]
-        },
-        {
-          "name": "string.quoted.backtick.hurl",
-          "begin": "`",
-          "end": "`",
-          "patterns": [
-            {
-              "include": "#escapes"
-            }
-          ]
         }
       ]
     },
@@ -77,6 +70,20 @@
               "name": "constant.numeric.status.hurl"
             }
           }
+        }
+      ]
+    },
+    "body": {
+      "patterns": [
+        {
+          "name": "string.quoted.backtick.hurl",
+          "begin": "`",
+          "end": "`",
+          "patterns": [
+            {
+              "include": "#escapes"
+            }
+          ]
         }
       ]
     }
