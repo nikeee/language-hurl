@@ -41,14 +41,6 @@
           "match": "\\b(GET|POST|PUT|DELETE|HEAD|PATCH|OPTIONS)\\b"
         },
         {
-          "name": "constant.language.version.hurl",
-          "match": "\\bHTTP/(1\\.0|1\\.1|2)\\b"
-        },
-        {
-          "name": "constant.numeric.status.hurl",
-          "match": "\\b[0-9]{3}\\b"
-        },
-        {
           "name": "keyword.operator.predicate.hurl",
           "match": "(==|!=|>=|<=|>|<|startsWith|endsWith|contains|matches|exists|isEmpty|includes|isInteger|isFloat|isBoolean|isString|isCollection|isDate|isIsoDate|isIpv4|isIpv6|isUuid)"
         }
