@@ -44,5 +44,13 @@
                 ]
             }
         ]
+    },
+    "escapes": {
+      "patterns": [
+        {
+          "name": "constant.character.escape.hurl",
+          "match": "\\\\[\\\\\"`#btnru]"
+        }
+      ]
     }
 }
