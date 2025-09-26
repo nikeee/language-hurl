@@ -11,5 +11,8 @@
     "github",
     "linguist",
     "tmlanguage"
-  ]
+  ],
+  "devDependencies": {
+    "vscode-tmgrammar-test": "^0.1.3"
+  }
 }
