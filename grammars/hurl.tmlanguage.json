@@ -94,6 +94,18 @@
         },
         {
           "name": "string.quoted.multiline.hurl",
+          "contentName": "text.plain",
+          "begin": "```hex$",
+          "end": "```$"
+        },
+        {
+          "name": "string.quoted.multiline.hurl",
+          "contentName": "text.plain",
+          "begin": "```base64$",
+          "end": "```$"
+        },
+        {
+          "name": "string.quoted.multiline.hurl",
           "begin": "```$",
           "end": "```$"
         },
