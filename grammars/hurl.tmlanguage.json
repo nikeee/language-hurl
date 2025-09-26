@@ -76,6 +76,24 @@
       "patterns": [
         {
           "name": "string.quoted.multiline.hurl",
+          "contentName": "source.graphql",
+          "begin": "```graphql$",
+          "end": "```$"
+        },
+        {
+          "name": "string.quoted.multiline.hurl",
+          "contentName": "text.xml",
+          "begin": "```xml$",
+          "end": "```$"
+        },
+        {
+          "name": "string.quoted.multiline.hurl",
+          "contentName": "text.json",
+          "begin": "```json$",
+          "end": "```$"
+        },
+        {
+          "name": "string.quoted.multiline.hurl",
           "begin": "```$",
           "end": "```$"
         },
