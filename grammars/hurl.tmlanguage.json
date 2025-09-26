@@ -1,56 +1,56 @@
 {
-    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "Hurl",
-    "scopeName": "source.hurl",
-    "patterns": [
-        {
-            "include": "#comments"
-        },
-        {
-            "include": "#sections"
-        },
-        {
-            "include": "#strings"
-        }
-    ],
-    "repository": {
-        "comments": {
-            "patterns": [
-                {
-                    "name": "comment.line.number-sign.hurl",
-                    "match": "#.*$"
-                }
-            ]
-        },
-        "sections": {
-            "patterns": [
-                {
-                    "name": "entity.name.section.hurl",
-                    "match": "^\\s*\\[(QueryStringParams|Query|FormParams|Form|MultipartFormData|Multipart|Cookies|Captures|Asserts|BasicAuth|Options)\\]"
-                }
-            ]
-        },
-        "strings": {
-            "patterns": [
-                {
-                    "name": "string.quoted.double.hurl",
-                    "begin": "\"",
-                    "end": "\"",
-                    "patterns": [
-                        {
-                            "include": "#escapes"
-                        }
-                    ]
-                }
-            ]
-        },
-        "escapes": {
-            "patterns": [
-                {
-                    "name": "constant.character.escape.hurl",
-                    "match": "\\\\[\\\\\"`#btnru]"
-                }
-            ]
-        }
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Hurl",
+  "scopeName": "source.hurl",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#sections"
+    },
+    {
+      "include": "#strings"
     }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.hurl",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "sections": {
+      "patterns": [
+        {
+          "name": "entity.name.section.hurl",
+          "match": "^\\s*\\[(QueryStringParams|Query|FormParams|Form|MultipartFormData|Multipart|Cookies|Captures|Asserts|BasicAuth|Options)\\]"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.hurl",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "include": "#escapes"
+            }
+          ]
+        }
+      ]
+    },
+    "escapes": {
+      "patterns": [
+        {
+          "name": "constant.character.escape.hurl",
+          "match": "\\\\[\\\\\"`#btnru]"
+        }
+      ]
+    }
+  }
 }
