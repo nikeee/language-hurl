@@ -1,10 +1,17 @@
 >POST https://example.org/InStock
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl
+#^^^^ source.hurl keyword.control.method.hurl
+#    ^ source.hurl
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
 >Content-Type: application/soap+xml; charset=utf-8
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl
+#^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
+#            ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
+#             ^ source.hurl entity.name.tag.header.hurl
+#              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
 >SOAPAction: "http://www.w3.org/2003/05/soap-envelope"
-#^^^^^^^^^^^^ source.hurl
-#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.double.hurl
+#^^^^^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
+#          ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
+#           ^ source.hurl entity.name.tag.header.hurl
+#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
 >```xml
 #^^^^^^ source.hurl meta.embedded.block.xml.hurl
 ><?xml version="1.0" encoding="UTF-8"?>
