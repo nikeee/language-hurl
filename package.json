@@ -30,7 +30,7 @@
       {
         "language": "hurl",
         "scopeName": "source.hurl",
-        "path": "./grammars/hurl.tmlanguage.json"
+        "path": "./grammar/hurl.tmlanguage.json"
       }
     ]
   },
