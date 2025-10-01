@@ -6,6 +6,10 @@
   "repository": "https://github.com/nikeee/language-hurl",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "test": "vscode-tmgrammar-snap --grammar ./grammar/hurl.tmlanguage.json ./test/*",
+    "snap:update": "vscode-tmgrammar-snap --updateSnapshot --grammar ./grammar/hurl.tmlanguage.json ./test/*"
+  },
   "keywords": [
     "hurl",
     "github",
