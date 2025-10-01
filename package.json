@@ -10,6 +10,7 @@
     "test": "vscode-tmgrammar-snap --grammar ./grammar/hurl.tmlanguage.json ./test/*",
     "snap:update": "vscode-tmgrammar-snap --updateSnapshot --grammar ./grammar/hurl.tmlanguage.json ./test/*",
     "format": "biome format --write .",
+    "format:file": "biome format --write",
     "ci": "biome ci"
   },
   "keywords": [

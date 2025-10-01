@@ -9,7 +9,7 @@ pre-commit:
   commands:
     format:
       glob: "*.json"
-      run: npm run format
+      run: npm run format:file -- {staged_files}
       stage_fixed: true
 
 skip_output:
