@@ -1,3 +1,16 @@
 ># this is a comment
 #^^^^^^^^^^^^^^^^^^^ source.hurl comment.line.number-sign.hurl
 >
+># these are also comments:
+#^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl comment.line.number-sign.hurl
+>
+># "asdasd"
+#^^^^^^^^^^ source.hurl comment.line.number-sign.hurl
+># `asdasd`
+#^^^^^^^^^^ source.hurl comment.line.number-sign.hurl
+>
+># csrf_token: xpath "string(//meta[@name='_csrf_token']/@content)"
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl comment.line.number-sign.hurl
+># GET https://example.org/api/health
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl comment.line.number-sign.hurl
+>
