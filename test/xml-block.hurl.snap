@@ -1,0 +1,33 @@
+>POST https://example.org/InStock
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl
+>Content-Type: application/soap+xml; charset=utf-8
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl
+>SOAPAction: "http://www.w3.org/2003/05/soap-envelope"
+#^^^^^^^^^^^^ source.hurl
+#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.double.hurl
+>```xml
+#^^^^^^ source.hurl meta.embedded.block.xml.hurl
+><?xml version="1.0" encoding="UTF-8"?>
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:m="https://example.org">
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+>  <soap:Header></soap:Header>
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+>  <soap:Body>
+#^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+>    <m:GetStockPrice>
+#^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+>      <m:StockName>GOOG</m:StockName>
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+>    </m:GetStockPrice>
+#^^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+>  </soap:Body>
+#^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+></soap:Envelope>
+#^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+>```
+#^^^ source.hurl meta.embedded.block.xml.hurl
+>HTTP 200
+#^^^^ source.hurl constant.language.version.hurl
+#    ^^^^ source.hurl constant.numeric.status.hurl
+>
