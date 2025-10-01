@@ -1,0 +1,16 @@
+>POST https://example.org/InStock
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl
+>```json
+#^^^^^^^ source.hurl meta.embedded.block.json.hurl
+>{
+#^^ source.hurl meta.embedded.block.json.hurl text.json
+>  "a": 1
+#^^^^^^^^^ source.hurl meta.embedded.block.json.hurl text.json
+>}
+#^^ source.hurl meta.embedded.block.json.hurl text.json
+>```
+#^^^ source.hurl meta.embedded.block.json.hurl
+>HTTP 200
+#^^^^ source.hurl constant.language.version.hurl
+#    ^^^^ source.hurl constant.numeric.status.hurl
+>
