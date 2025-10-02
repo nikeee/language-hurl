@@ -1,0 +1,37 @@
+import type { Loader } from "astro/loaders";
+
+import * as fs from "node:fs/promises";
+
+async function loadSamples() {
+    const files = fs.glob("../test/**/*.hurl");
+
+    const samples = [];
+    for await (const file of files) {
+        const content = await fs.readFile(file, "utf-8");
+        samples.push({
+            name: file.substring("../test/".length),
+            content,
+        });
+    }
+
+    return samples;
+}
+
+export function sampleLoader(): Loader {
+    return {
+        name: 'sample-loader',
+        async load({ renderMarkdown, store }) {
+            const entries = await loadSamples();
+
+            store.clear();
+
+            for (const entry of entries) {
+                store.set({
+                    id: entry.name,
+                    data: entry,
+                    rendered: await renderMarkdown("````hurl\n" + entry.content + "\n````"),
+                });
+            }
+        },
+    };
+}
