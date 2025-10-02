@@ -55,9 +55,18 @@
     "placeholders": {
       "patterns": [
         {
-          "name": "string.interpolated.hurl",
-          "begin": "\\{\\{",
-          "end": "\\}\\}",
+          "begin": "(\\{\\{)\\s*",
+          "end": "\\s*(\\}\\})",
+          "beginCaptures": {
+            "1": {
+              "name": "string.interpolated.hurl"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "string.interpolated.hurl"
+            }
+          },
           "contentName": "variable.other.hurl"
         }
       ]
