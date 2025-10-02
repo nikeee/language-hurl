@@ -1,0 +1,29 @@
+>POST https://example.org/contact
+#^^^^ source.hurl keyword.control.method.hurl
+#    ^ source.hurl
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+>[Form]
+#^^^^^^ source.hurl entity.name.section.hurl
+>default: false
+#^^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
+#       ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
+#        ^ source.hurl entity.name.tag.header.hurl
+#         ^^^^^ source.hurl entity.name.tag.header.hurl
+>token: {{token}}
+#^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
+#     ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
+#      ^ source.hurl entity.name.tag.header.hurl
+#       ^^ source.hurl entity.name.tag.header.hurl variable.other.placeholder.hurl
+#         ^^^^^ source.hurl entity.name.tag.header.hurl variable.other.placeholder.hurl
+#              ^^ source.hurl entity.name.tag.header.hurl variable.other.placeholder.hurl
+>email: john.doe@rookie.org
+#^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
+#     ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
+#      ^ source.hurl entity.name.tag.header.hurl
+#       ^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
+>number: 33611223344
+#^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
+#      ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
+#       ^ source.hurl entity.name.tag.header.hurl
+#        ^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
+>
