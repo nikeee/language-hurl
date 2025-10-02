@@ -24,3 +24,25 @@ jobs:
       - run: npm ci
       - run: npm run ci
       - run: npm test
+
+  preview:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./preview
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24.x
+          # cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./dist
