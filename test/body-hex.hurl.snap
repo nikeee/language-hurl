@@ -1,0 +1,12 @@
+>PUT https://example.org
+#^^^ source.hurl keyword.control.method.hurl
+#   ^ source.hurl
+#    ^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+># Send a café, encoded in UTF-8
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl comment.line.number-sign.hurl
+>hex,636166c3a90a;
+#^^^ source.hurl support.function support.function.name
+#   ^ source.hurl support.function
+#    ^^^^^^^^^^^^ source.hurl support.function text.plain
+#                ^ source.hurl support.function support.function
+>

@@ -1,0 +1,23 @@
+# Docs: https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
+pre-push:
+  commands:
+    lint:
+      run: npm run ci
+    test:
+      run: npm test
+
+pre-commit:
+  parallel: true
+  commands:
+    format:
+      glob: "*.json"
+      run: npm run format:file -- {staged_files}
+      stage_fixed: true
+
+skip_output:
+  - meta
+  - empty_summary
+  - success
+  - execution_out
+  - execution_info
+  - skips

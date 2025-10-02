@@ -1,0 +1,14 @@
+># Perform basic authentication with login `bob` and password `secret`.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl comment.line.number-sign.hurl
+>GET https://example.org/protected
+#^^^ source.hurl keyword.control.method.hurl
+#   ^ source.hurl
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+>[BasicAuth]
+#^^^^^^^^^^^ source.hurl entity.name.section.hurl
+>bob: secret
+#^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
+#   ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
+#    ^ source.hurl entity.name.tag.header.hurl
+#     ^^^^^^ source.hurl entity.name.tag.header.hurl
+>

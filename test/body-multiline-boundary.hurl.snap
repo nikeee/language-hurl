@@ -1,0 +1,41 @@
+>POST https://example.org/upload
+#^^^^ source.hurl keyword.control.method.hurl
+#    ^ source.hurl
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+>Content-Type: multipart/form-data; boundary="boundary"
+#^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
+#            ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
+#             ^ source.hurl entity.name.tag.header.hurl
+#              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
+>```
+#^^^ source.hurl string.quoted.multiline.hurl
+>--boundary
+#^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
+>Content-Disposition: form-data; name="key1"
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
+>
+>value1
+#^^^^^^^ source.hurl string.quoted.multiline.hurl
+>--boundary
+#^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
+>Content-Disposition: form-data; name="upload1"; filename="data.txt"
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
+>Content-Type: text/plain
+#^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
+>
+>Hello World!
+#^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
+>--boundary
+#^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
+>Content-Disposition: form-data; name="upload2"; filename="data.html"
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
+>Content-Type: text/html
+#^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
+>
+><div>Hello <b>World</b>!</div>
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
+>--boundary--
+#^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
+>```
+#^^^ source.hurl string.quoted.multiline.hurl
+>

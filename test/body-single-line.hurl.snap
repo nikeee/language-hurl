@@ -1,0 +1,10 @@
+>POST https://example.org/helloworld
+#^^^^ source.hurl keyword.control.method.hurl
+#    ^ source.hurl
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+>`Hello world!`
+#^^^^^^^^^^^^^^ source.hurl string.quoted.backtick.hurl
+>HTTP 200
+#^^^^ source.hurl constant.language.version.hurl
+#    ^^^^ source.hurl constant.numeric.status.hurl
+>

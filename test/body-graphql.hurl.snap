@@ -1,0 +1,24 @@
+>POST https://example.org/graphql
+#^^^^ source.hurl keyword.control.method.hurl
+#    ^ source.hurl
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+>```graphql
+#^^^^^^^^^^ source.hurl meta.embedded.block.graphql.hurl
+>{
+#^^ source.hurl meta.embedded.block.graphql.hurl source.graphql
+>  human(id: "1000") {
+#^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.graphql.hurl source.graphql
+>    name
+#^^^^^^^^^ source.hurl meta.embedded.block.graphql.hurl source.graphql
+>    height(unit: FOOT)
+#^^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.graphql.hurl source.graphql
+>  }
+#^^^^ source.hurl meta.embedded.block.graphql.hurl source.graphql
+>}
+#^^ source.hurl meta.embedded.block.graphql.hurl source.graphql
+>```
+#^^^ source.hurl meta.embedded.block.graphql.hurl
+>HTTP 200
+#^^^^ source.hurl constant.language.version.hurl
+#    ^^^^ source.hurl constant.numeric.status.hurl
+>

@@ -1,0 +1,24 @@
+>POST https://example.org/upload
+#^^^^ source.hurl keyword.control.method.hurl
+#    ^ source.hurl
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+>[Multipart]
+#^^^^^^^^^^^ source.hurl entity.name.section.hurl
+>field1: value1
+#^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
+#      ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
+#       ^ source.hurl entity.name.tag.header.hurl
+#        ^^^^^^ source.hurl entity.name.tag.header.hurl
+>field2: file,example.txt;
+#^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
+#      ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
+#       ^ source.hurl entity.name.tag.header.hurl
+#        ^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
+># One can specify the file content type:
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl comment.line.number-sign.hurl
+>field3: file,example.zip; application/zip
+#^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
+#      ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
+#       ^ source.hurl entity.name.tag.header.hurl
+#        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
+>

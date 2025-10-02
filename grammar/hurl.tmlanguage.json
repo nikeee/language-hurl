@@ -17,6 +17,9 @@
     },
     {
       "include": "#body"
+    },
+    {
+      "include": "#request"
     }
   ],
   "repository": {
@@ -52,9 +55,19 @@
     "placeholders": {
       "patterns": [
         {
-          "name": "variable.other.placeholder.hurl",
-          "begin": "\\{\\{",
-          "end": "\\}\\}"
+          "begin": "(\\{\\{)\\s*",
+          "end": "\\s*(\\}\\})",
+          "beginCaptures": {
+            "1": {
+              "name": "string.interpolated.hurl"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "string.interpolated.hurl"
+            }
+          },
+          "contentName": "variable.other.hurl"
         }
       ]
     },
@@ -78,6 +91,47 @@
               "name": "constant.numeric.status.hurl"
             }
           }
+        }
+      ]
+    },
+    "request": {
+      "patterns": [
+        {
+          "name": "keyword.control.method.hurl",
+          "match": "\\b(GET|POST|PUT|DELETE|PATCH|HEAD|OPTIONS|TRACE|CONNECT)\\b"
+        },
+        {
+          "name": "string.quoted.url.hurl",
+          "begin": "(https?:\\/\\/[^ \\t\\n]+)",
+          "beginCaptures": {
+            "1": {
+              "name": "string.quoted.url.hurl"
+            }
+          },
+          "end": "(?=$|[ \\t])",
+          "patterns": [
+            {
+              "include": "#placeholders"
+            }
+          ]
+        },
+        {
+          "name": "entity.name.tag.header.hurl",
+          "begin": "^([A-Za-z0-9-]+)(:)\\s*",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.tag.header.hurl"
+            },
+            "2": {
+              "name": "punctuation.separator.key-value.hurl"
+            }
+          },
+          "end": "$",
+          "patterns": [
+            {
+              "include": "#placeholders"
+            }
+          ]
         }
       ]
     },
