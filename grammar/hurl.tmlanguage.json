@@ -171,6 +171,17 @@
           }
         },
         {
+          "name": "meta.embedded.block.csv.hurl",
+          "patterns": [{ "include": "text.csv" }],
+          "begin": "```csv(,\\w+)*$",
+          "end": "```$",
+          "beginCaptures": {
+            "1": {
+              "name": "support.type"
+            }
+          }
+        },
+        {
           "name": "string.quoted.multiline.hurl",
           "contentName": "text.plain",
           "begin": "```hex(,\\w+)*$",
