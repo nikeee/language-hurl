@@ -5,19 +5,19 @@ import hurl from "../grammar/hurl.tmlanguage.json" with { type: "json" };
 
 // https://astro.build/config
 export default defineConfig({
-    markdown: {
-        shikiConfig: {
-            langs: [
-                bundledLanguages.json,
-                bundledLanguages.graphql,
-                bundledLanguages.csv,
-                bundledLanguages.xml,
-                {
-                    ...(hurl as any),
-                    name: "hurl",
-                    embeddedLangs: ["json", "graphql", "csv", "xml"],
-                },
-            ],
-        }
-    }
+  markdown: {
+    shikiConfig: {
+      langs: [
+        bundledLanguages.json,
+        bundledLanguages.graphql,
+        bundledLanguages.csv,
+        bundledLanguages.xml,
+        {
+          ...(hurl as any),
+          name: "hurl",
+          embeddedLangs: ["json", "graphql", "csv", "xml"],
+        },
+      ],
+    },
+  },
 });

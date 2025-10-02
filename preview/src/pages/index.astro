@@ -6,10 +6,10 @@ const samples = await getCollection("samples");
 
 const renderedSamples = [];
 for (const sample of samples) {
-	renderedSamples.push({
-		...sample,
-		Content: (await render(sample)).Content,
-	});
+  renderedSamples.push({
+    ...sample,
+    Content: (await render(sample)).Content,
+  });
 }
 ---
 
