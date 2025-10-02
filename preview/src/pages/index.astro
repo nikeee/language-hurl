@@ -1,16 +1,28 @@
 ---
+import * as fs from "node:fs/promises";
+import { Code } from "astro:components";
 
+const files = fs.glob("../test/**/*.hurl");
+
+const samples = [];
+for await (const file of files) {
+	const content = await fs.readFile(file, "utf-8");
+	samples.push(content);
+}
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Syntax-Preview</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>Syntax-Preview</h1>
+		{samples.map(sample => (
+			<article>
+				<Code code={sample} lang="Hurl" />
+			</article>
+		))}
 	</body>
 </html>
