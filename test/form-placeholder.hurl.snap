@@ -13,9 +13,9 @@
 #^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
 #     ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
 #      ^ source.hurl entity.name.tag.header.hurl
-#       ^^ source.hurl entity.name.tag.header.hurl variable.other.placeholder.hurl
-#         ^^^^^ source.hurl entity.name.tag.header.hurl variable.other.placeholder.hurl
-#              ^^ source.hurl entity.name.tag.header.hurl variable.other.placeholder.hurl
+#       ^^ source.hurl entity.name.tag.header.hurl string.interpolated.hurl
+#         ^^^^^ source.hurl entity.name.tag.header.hurl string.interpolated.hurl variable.other.hurl
+#              ^^ source.hurl entity.name.tag.header.hurl string.interpolated.hurl
 >email: john.doe@rookie.org
 #^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
 #     ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl

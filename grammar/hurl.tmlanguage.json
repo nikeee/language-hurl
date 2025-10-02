@@ -55,9 +55,10 @@
     "placeholders": {
       "patterns": [
         {
-          "name": "variable.other.placeholder.hurl",
+          "name": "string.interpolated.hurl",
           "begin": "\\{\\{",
-          "end": "\\}\\}"
+          "end": "\\}\\}",
+          "contentName": "variable.other.hurl"
         }
       ]
     },
