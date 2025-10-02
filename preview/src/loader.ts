@@ -1,6 +1,5 @@
-import type { Loader } from "astro/loaders";
-
 import * as fs from "node:fs/promises";
+import type { Loader } from "astro/loaders";
 
 async function loadSamples() {
   const files = fs.glob("../test/**/*.hurl");
@@ -30,7 +29,7 @@ export function sampleLoader(): Loader {
           id: entry.name,
           data: entry,
           rendered: await renderMarkdown(
-            "````hurl\n" + entry.content + "\n````",
+            `\`\`\`\`hurl\n${entry.content}\n\`\`\`\``,
           ),
         });
       }

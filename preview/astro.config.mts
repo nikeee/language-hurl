@@ -13,6 +13,7 @@ export default defineConfig({
         bundledLanguages.csv,
         bundledLanguages.xml,
         {
+          // biome-ignore lint/suspicious/noExplicitAny: :shrug:
           ...(hurl as any),
           name: "hurl",
           embeddedLangs: ["json", "graphql", "csv", "xml"],
