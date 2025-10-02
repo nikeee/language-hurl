@@ -1,7 +1,17 @@
->POST https://example.org/contact
+>POST https://example.org/contact/{{foo }}?q={{ bar }}
 #^^^^ source.hurl keyword.control.method.hurl
 #    ^ source.hurl
-#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+#                                 ^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl string.interpolated.hurl
+#                                   ^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl variable.other.hurl
+#                                      ^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+#                                       ^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl string.interpolated.hurl
+#                                         ^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+#                                            ^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl string.interpolated.hurl
+#                                              ^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+#                                               ^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl variable.other.hurl
+#                                                  ^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+#                                                   ^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl string.interpolated.hurl
 >[Form]
 #^^^^^^ source.hurl entity.name.section.hurl
 >default: false

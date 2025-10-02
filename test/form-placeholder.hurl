@@ -1,4 +1,4 @@
-POST https://example.org/contact
+POST https://example.org/contact/{{foo }}?q={{ bar }}
 [Form]
 default: false
 token: {{token}}

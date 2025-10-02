@@ -102,18 +102,17 @@
         },
         {
           "name": "string.quoted.url.hurl",
-          "begin": "(https?:\\/\\/[^ \\t\\n]+)",
-          "beginCaptures": {
+          "match": "(https?:\\/\\/[^\\t\\n]+)\\s*$",
+          "captures": {
             "1": {
-              "name": "string.quoted.url.hurl"
+              "name": "string.quoted.url.hurl",
+              "patterns": [
+                {
+                  "include": "#placeholders"
+                }
+              ]
             }
-          },
-          "end": "(?=$|[ \\t])",
-          "patterns": [
-            {
-              "include": "#placeholders"
-            }
-          ]
+          }
         },
         {
           "name": "entity.name.tag.header.hurl",
@@ -139,7 +138,11 @@
       "patterns": [
         {
           "name": "meta.embedded.block.graphql.hurl",
-          "patterns": [{ "include": "source.graphql" }],
+          "patterns": [
+            {
+              "include": "source.graphql"
+            }
+          ],
           "begin": "```graphql(,\\w+)*$",
           "end": "```$",
           "beginCaptures": {
@@ -150,7 +153,11 @@
         },
         {
           "name": "meta.embedded.block.xml.hurl",
-          "patterns": [{ "include": "text.xml" }],
+          "patterns": [
+            {
+              "include": "text.xml"
+            }
+          ],
           "begin": "```xml(,\\w+)*$",
           "end": "```$",
           "beginCaptures": {
@@ -161,7 +168,11 @@
         },
         {
           "name": "meta.embedded.block.json.hurl",
-          "patterns": [{ "include": "text.json" }],
+          "patterns": [
+            {
+              "include": "text.json"
+            }
+          ],
           "begin": "```json(,\\w+)*$",
           "end": "```$",
           "beginCaptures": {
@@ -172,7 +183,11 @@
         },
         {
           "name": "meta.embedded.block.csv.hurl",
-          "patterns": [{ "include": "text.csv" }],
+          "patterns": [
+            {
+              "include": "text.csv"
+            }
+          ],
           "begin": "```csv(,\\w+)*$",
           "end": "```$",
           "beginCaptures": {
