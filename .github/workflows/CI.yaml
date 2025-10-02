@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - main
-  pull_request:
+  # TODO: Only deploy on main branch
+  # pull_request:
 
 jobs:
   test:
@@ -27,7 +28,6 @@ jobs:
 
   preview:
     needs: test
-    
     runs-on: ubuntu-latest
 
     defaults:
