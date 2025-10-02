@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
-import { bundledLanguages } from 'shiki'
+import { bundledLanguages } from "shiki";
 
 import type { IRawGrammar } from "shiki/textmate";
 import hurlGrammar from "../grammar/hurl.tmlanguage.json" with { type: "json" };
