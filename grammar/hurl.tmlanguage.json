@@ -139,7 +139,7 @@
       "patterns": [
         {
           "name": "meta.embedded.block.graphql.hurl",
-          "contentName": "source.graphql",
+          "patterns": [{ "include": "source.graphql" }],
           "begin": "```graphql(,\\w+)*$",
           "end": "```$",
           "beginCaptures": {
@@ -150,7 +150,7 @@
         },
         {
           "name": "meta.embedded.block.xml.hurl",
-          "contentName": "text.xml",
+          "patterns": [{ "include": "text.xml" }],
           "begin": "```xml(,\\w+)*$",
           "end": "```$",
           "beginCaptures": {
@@ -161,7 +161,7 @@
         },
         {
           "name": "meta.embedded.block.json.hurl",
-          "contentName": "text.json",
+          "patterns": [{ "include": "text.json" }],
           "begin": "```json(,\\w+)*$",
           "end": "```$",
           "beginCaptures": {
