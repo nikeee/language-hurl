@@ -35,7 +35,7 @@ for await (const file of files) {
 			samples.map((sample) => (
 				<article>
 					<h2>{sample.name}</h2>
-					<Code class="code" code={sample.content} lang={lang} />
+					<Code class="code" code={sample.content} lang={lang}  theme="github-dark-default" />
 				</article>
 			))
 		}
