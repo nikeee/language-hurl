@@ -26,6 +26,8 @@ jobs:
       - run: npm test
 
   preview:
+    needs: test
+    
     runs-on: ubuntu-latest
 
     defaults:
@@ -45,4 +47,4 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: ./dist
+          path: ./preview/dist
