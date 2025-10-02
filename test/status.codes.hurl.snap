@@ -1,0 +1,11 @@
+>HTTP
+#^^^^ source.hurl constant.language.version.hurl
+>
+>HTTP 200
+#^^^^ source.hurl constant.language.version.hurl
+#    ^^^^ source.hurl constant.numeric.status.hurl
+>
+>HTTP/1.1 200
+#^^^^^^^^ source.hurl constant.language.version.hurl
+#        ^^^^ source.hurl constant.numeric.status.hurl
+>
