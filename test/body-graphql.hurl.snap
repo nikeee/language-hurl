@@ -3,21 +3,22 @@
 #    ^ source.hurl
 #     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
 >```graphql
-#^^^^^^^^^^ source.hurl meta.embedded.block.graphql.hurl
+#^^^ source.hurl string.quoted.multiline.hurl
+#   ^^^^^^^^ source.hurl string.quoted.multiline.hurl support.type
 >{
-#^^ source.hurl meta.embedded.block.graphql.hurl source.graphql
+#^^ source.hurl string.quoted.multiline.hurl
 >  human(id: "1000") {
-#^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.graphql.hurl source.graphql
+#^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
 >    name
-#^^^^^^^^^ source.hurl meta.embedded.block.graphql.hurl source.graphql
+#^^^^^^^^^ source.hurl string.quoted.multiline.hurl
 >    height(unit: FOOT)
-#^^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.graphql.hurl source.graphql
+#^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
 >  }
-#^^^^ source.hurl meta.embedded.block.graphql.hurl source.graphql
+#^^^^ source.hurl string.quoted.multiline.hurl
 >}
-#^^ source.hurl meta.embedded.block.graphql.hurl source.graphql
+#^^ source.hurl string.quoted.multiline.hurl
 >```
-#^^^ source.hurl meta.embedded.block.graphql.hurl
+#^^^ source.hurl string.quoted.multiline.hurl
 >HTTP 200
 #^^^^ source.hurl constant.language.version.hurl
 #    ^^^^ source.hurl constant.numeric.status.hurl

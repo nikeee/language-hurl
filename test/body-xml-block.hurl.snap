@@ -13,27 +13,28 @@
 #           ^ source.hurl entity.name.tag.header.hurl
 #            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
 >```xml
-#^^^^^^ source.hurl meta.embedded.block.xml.hurl
+#^^^ source.hurl string.quoted.multiline.hurl
+#   ^^^^ source.hurl string.quoted.multiline.hurl support.type
 ><?xml version="1.0" encoding="UTF-8"?>
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
 ><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:m="https://example.org">
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
 >  <soap:Header></soap:Header>
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
 >  <soap:Body>
-#^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+#^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
 >    <m:GetStockPrice>
-#^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+#^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
 >      <m:StockName>GOOG</m:StockName>
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
 >    </m:GetStockPrice>
-#^^^^^^^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+#^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
 >  </soap:Body>
-#^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+#^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
 ></soap:Envelope>
-#^^^^^^^^^^^^^^^^^ source.hurl meta.embedded.block.xml.hurl text.xml
+#^^^^^^^^^^^^^^^^^ source.hurl string.quoted.multiline.hurl
 >```
-#^^^ source.hurl meta.embedded.block.xml.hurl
+#^^^ source.hurl string.quoted.multiline.hurl
 >HTTP 200
 #^^^^ source.hurl constant.language.version.hurl
 #    ^^^^ source.hurl constant.numeric.status.hurl
