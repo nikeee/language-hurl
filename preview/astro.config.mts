@@ -8,7 +8,10 @@ export default defineConfig({
     markdown: {
         shikiConfig: {
             langs: [
-                ...Object.values(bundledLanguages),
+                bundledLanguages.json,
+                bundledLanguages.graphql,
+                bundledLanguages.csv,
+                bundledLanguages.xml,
                 {
                     ...(hurl as any),
                     name: "hurl",
