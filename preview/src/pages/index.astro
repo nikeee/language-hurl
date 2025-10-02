@@ -1,0 +1,81 @@
+---
+import * as fs from "node:fs/promises";
+import { Code } from "astro:components";
+
+import hurlGrammar from "../../../grammar/hurl.tmlanguage.json" with {
+  type: "json",
+};
+
+const files = fs.glob("../test/**/*.hurl");
+
+const samples = [];
+for await (const file of files) {
+  const content = await fs.readFile(file, "utf-8");
+  samples.push(content);
+}
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Syntax-Preview</title>
+	</head>
+	<body>
+		<h1>Syntax-Preview</h1>
+		{
+			samples.map((sample) => (
+				<article>
+					<Code class="code" code={sample} lang={hurlGrammar} />
+				</article>
+			))
+		}
+	</body>
+</html>
+<style>
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+		background: #0b0f14;
+		color: #e6eef6;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+			"Helvetica Neue", Arial, sans-serif;
+		line-height: 1.5;
+	}
+
+	a {
+		color: #4fb3ff;
+		text-decoration: none;
+	}
+
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+
+	button,
+	input,
+	textarea,
+	select {
+		background: #0f1419;
+		color: #e6eef6;
+		border: 1px solid #333;
+		border-radius: 6px;
+		padding: 0.5rem 0.75rem;
+	}
+
+	hr {
+		border: none;
+		border-top: 1px solid #333;
+		margin: 1rem 0;
+	}
+
+	article {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	.code {
+		padding: 10px;
+	}
+</style>
