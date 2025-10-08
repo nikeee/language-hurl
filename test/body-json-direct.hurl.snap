@@ -1,0 +1,16 @@
+>POST https://example.org/InStock
+#^^^^ source.hurl keyword.control.method.hurl
+#    ^ source.hurl
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.unquoted.url.hurl string.unquoted.url.hurl
+>{
+#^^ source.hurl
+>  "a": 1
+#^^ source.hurl
+#  ^^^ source.hurl string.quoted.double.hurl
+#     ^^^^ source.hurl
+>}
+#^^ source.hurl
+>HTTP 200
+#^^^^ source.hurl constant.language.version.hurl
+#    ^^^^ source.hurl constant.numeric.status.hurl
+>

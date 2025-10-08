@@ -1,0 +1,44 @@
+>POST https://example.org/InStock
+#^^^^ source.hurl keyword.control.method.hurl
+#    ^ source.hurl
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.unquoted.url.hurl string.unquoted.url.hurl
+>Content-Type: application/soap+xml; charset=utf-8
+#^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
+#            ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
+#             ^ source.hurl entity.name.tag.header.hurl
+#              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl string.unquoted.hurl
+>SOAPAction: "http://www.w3.org/2003/05/soap-envelope"
+#^^^^^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
+#          ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
+#           ^ source.hurl entity.name.tag.header.hurl
+#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl string.unquoted.hurl
+><?xml version="1.0" encoding="UTF-8"?>
+#^^^^^^^^^^^^^^ source.hurl
+#              ^^^^^ source.hurl string.quoted.double.hurl
+#                   ^^^^^^^^^^ source.hurl
+#                             ^^^^^^^ source.hurl string.quoted.double.hurl
+#                                    ^^^ source.hurl
+><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:m="https://example.org">
+#^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl
+#                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.double.hurl
+#                                                                   ^^^^^^^^^ source.hurl
+#                                                                            ^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.double.hurl
+#                                                                                                 ^^ source.hurl
+>  <soap:Header></soap:Header>
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl
+>  <soap:Body>
+#^^^^^^^^^^^^^^ source.hurl
+>    <m:GetStockPrice>
+#^^^^^^^^^^^^^^^^^^^^^^ source.hurl
+>      <m:StockName>GOOG</m:StockName>
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl
+>    </m:GetStockPrice>
+#^^^^^^^^^^^^^^^^^^^^^^^ source.hurl
+>  </soap:Body>
+#^^^^^^^^^^^^^^^ source.hurl
+></soap:Envelope>
+#^^^^^^^^^^^^^^^^^ source.hurl
+>HTTP 200
+#^^^^ source.hurl constant.language.version.hurl
+#    ^^^^ source.hurl constant.numeric.status.hurl
+>
