@@ -6,7 +6,7 @@
 #^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
 #            ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
 #             ^ source.hurl entity.name.tag.header.hurl
-#              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
+#              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl string.unquoted.hurl
 >```
 #^^^ source.hurl string.quoted.multiline.hurl
 >--boundary

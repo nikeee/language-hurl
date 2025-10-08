@@ -126,6 +126,7 @@
             }
           },
           "end": "$",
+          "contentName": "string.unquoted.hurl",
           "patterns": [
             {
               "include": "#placeholders"

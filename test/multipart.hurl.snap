@@ -8,17 +8,17 @@
 #^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
 #      ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
 #       ^ source.hurl entity.name.tag.header.hurl
-#        ^^^^^^ source.hurl entity.name.tag.header.hurl
+#        ^^^^^^ source.hurl entity.name.tag.header.hurl string.unquoted.hurl
 >field2: file,example.txt;
 #^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
 #      ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
 #       ^ source.hurl entity.name.tag.header.hurl
-#        ^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
+#        ^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl string.unquoted.hurl
 ># One can specify the file content type:
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl comment.line.number-sign.hurl
 >field3: file,example.zip; application/zip
 #^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
 #      ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
 #       ^ source.hurl entity.name.tag.header.hurl
-#        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
+#        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl string.unquoted.hurl
 >

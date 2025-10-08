@@ -10,12 +10,12 @@
 #^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
 #     ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
 #      ^ source.hurl entity.name.tag.header.hurl
-#       ^^^^^ source.hurl entity.name.tag.header.hurl
+#       ^^^^^ source.hurl entity.name.tag.header.hurl string.unquoted.hurl
 >sessionToken: abc123
 #^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
 #            ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
 #             ^ source.hurl entity.name.tag.header.hurl
-#              ^^^^^^ source.hurl entity.name.tag.header.hurl
+#              ^^^^^^ source.hurl entity.name.tag.header.hurl string.unquoted.hurl
 >
 ># Run the same GET request with a header:
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl comment.line.number-sign.hurl
@@ -27,5 +27,5 @@
 #^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
 #      ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
 #       ^ source.hurl entity.name.tag.header.hurl
-#        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
+#        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl string.unquoted.hurl
 >

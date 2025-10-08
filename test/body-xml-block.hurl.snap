@@ -6,12 +6,12 @@
 #^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
 #            ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
 #             ^ source.hurl entity.name.tag.header.hurl
-#              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
+#              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl string.unquoted.hurl
 >SOAPAction: "http://www.w3.org/2003/05/soap-envelope"
 #^^^^^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
 #          ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl
 #           ^ source.hurl entity.name.tag.header.hurl
-#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl
+#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl string.unquoted.hurl
 >```xml
 #^^^ source.hurl string.quoted.multiline.hurl
 #   ^^^^ source.hurl string.quoted.multiline.hurl support.type
