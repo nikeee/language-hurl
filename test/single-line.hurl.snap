@@ -1,5 +1,5 @@
 >GET https://example.org
 #^^^ source.hurl keyword.control.method.hurl
 #   ^ source.hurl
-#    ^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+#    ^^^^^^^^^^^^^^^^^^^ source.hurl string.unquoted.url.hurl string.unquoted.url.hurl
 >

@@ -1,7 +1,7 @@
 >POST https://example.org/InStock
 #^^^^ source.hurl keyword.control.method.hurl
 #    ^ source.hurl
-#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.unquoted.url.hurl string.unquoted.url.hurl
 >```json
 #^^^ source.hurl string.quoted.multiline.hurl
 #   ^^^^^ source.hurl string.quoted.multiline.hurl support.type

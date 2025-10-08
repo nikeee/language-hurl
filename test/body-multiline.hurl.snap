@@ -1,7 +1,7 @@
 >POST https://example.org/models
 #^^^^ source.hurl keyword.control.method.hurl
 #    ^ source.hurl
-#     ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.unquoted.url.hurl string.unquoted.url.hurl
 >```
 #^^^ source.hurl string.quoted.multiline.hurl
 >Year,Make,Model,Description,Price

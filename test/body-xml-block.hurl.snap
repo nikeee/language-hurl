@@ -1,7 +1,7 @@
 >POST https://example.org/InStock
 #^^^^ source.hurl keyword.control.method.hurl
 #    ^ source.hurl
-#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.quoted.url.hurl string.quoted.url.hurl
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hurl string.unquoted.url.hurl string.unquoted.url.hurl
 >Content-Type: application/soap+xml; charset=utf-8
 #^^^^^^^^^^^^ source.hurl entity.name.tag.header.hurl entity.name.tag.header.hurl
 #            ^ source.hurl entity.name.tag.header.hurl punctuation.separator.key-value.hurl

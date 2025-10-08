@@ -101,11 +101,11 @@
           "match": "\\b(GET|POST|PUT|DELETE|PATCH|HEAD|OPTIONS|TRACE|CONNECT)\\b"
         },
         {
-          "name": "string.quoted.url.hurl",
+          "name": "string.unquoted.url.hurl",
           "match": "(https?:\\/\\/[^\\t\\n]+)\\s*$",
           "captures": {
             "1": {
-              "name": "string.quoted.url.hurl",
+              "name": "string.unquoted.url.hurl",
               "patterns": [
                 {
                   "include": "#placeholders"
