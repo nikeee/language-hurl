@@ -2,13 +2,13 @@ import * as fs from "node:fs/promises";
 import type { Loader } from "astro/loaders";
 
 async function loadSamples() {
-  const files = fs.glob("../test/**/*.hurl");
+  const files = fs.glob("../tests/**/*.hurl");
 
   const samples = [];
   for await (const file of files) {
     const content = await fs.readFile(file, "utf-8");
     samples.push({
-      name: file.substring("../test/".length),
+      name: file.substring("../tests/".length),
       content,
     });
   }

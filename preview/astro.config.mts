@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import { bundledLanguages } from "shiki";
 
-import hurl from "../grammar/hurl.tmlanguage.json" with { type: "json" };
+import hurl from "../grammars/hurl.tmlanguage.json" with { type: "json" };
 
 // https://astro.build/config
 export default defineConfig({

@@ -7,8 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": "vscode-tmgrammar-snap --grammar ./grammar/hurl.tmlanguage.json ./test/*",
-    "snap:update": "vscode-tmgrammar-snap --updateSnapshot --grammar ./grammar/hurl.tmlanguage.json ./test/*",
+    "test": "vscode-tmgrammar-snap --grammar ./grammars/hurl.tmlanguage.json ./tests/*",
+    "snap:update": "vscode-tmgrammar-snap --updateSnapshot --grammar ./grammars/hurl.tmlanguage.json ./tests/*",
     "format": "biome format --write .",
     "format:file": "biome format --write",
     "ci": "biome ci"
@@ -37,7 +37,7 @@
       {
         "language": "hurl",
         "scopeName": "source.hurl",
-        "path": "./grammar/hurl.tmlanguage.json"
+        "path": "./grammars/hurl.tmlanguage.json"
       }
     ]
   },
