@@ -9,7 +9,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
 
     strategy:
       matrix:
@@ -28,7 +28,7 @@ jobs:
 
   build-preview:
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
 
     defaults:
       run:
@@ -50,7 +50,7 @@ jobs:
           path: ./preview/dist
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
 
     permissions:
       pages: write
